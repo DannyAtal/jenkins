@@ -11,15 +11,15 @@ pipeline {
             steps {
                 // Clone the repository using shell commands
                 echo 'Cloning the repository...'
-                sh 'git clone -b dev https://github.com/shomronh/certis.git'
+                sh 'git clone -b madlentest https://github.com/shomronh/certis.git'
                 echo 'Repository cloned successfully.'
             }
         }
-        stage('Build') {
+        stage('Build dockerfile') {
             steps {
                 // Simulate a build step
                 echo 'Building the project...'
-                sh 'echo "Build completed!" > build.log'
+                sh 'docker build -t testimage:v1 -f dockerfile.dockerfile .'
                 echo 'Build completed!'
             }
         }
