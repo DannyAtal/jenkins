@@ -19,7 +19,7 @@ pipeline {
             steps {
                 // Simulate a build step
                 echo 'Building the project...'
-                sh 'docker build -t testimage:v1 -f dockerfile.dockerfile .'
+                sh 'docker build -t testimage:v1 -f certis/dockerfile.dockerfile .'
                 echo 'Build completed!'
             }
         }
