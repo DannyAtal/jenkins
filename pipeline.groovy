@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'docker:20.10' }
-    }
+    agent any
     stages {
         stage('Clean Workspace') {
             steps {
