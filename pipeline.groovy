@@ -24,11 +24,11 @@ pipeline {
                 echo 'Build completed!'
             }
         }
-        stage('Test') {
+        stage('run docker') {
             steps {
                 // Simulate running tests
-                echo 'Running tests...'
-                sh 'echo "All tests passed!" > test-results.log'
+                echo 'Running docker image...'
+                sh 'docker run testimage:v1'
                 echo 'Tests completed successfully!'
             }
         }
