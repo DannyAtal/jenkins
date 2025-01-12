@@ -28,7 +28,7 @@ pipeline {
             steps {
                 // Simulate running tests
                 echo 'Running docker image...'
-                sh 'docker run testimage:v1'
+                sh 'docker run -d testimage:v1'
                 echo 'Tests completed successfully!'
             }
         }
